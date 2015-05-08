@@ -7,7 +7,7 @@ This an introduction to bioinformatics programming for high school age students.
 
 1. Introduce students to the Raspberry PI hardware.
 1. Have students navigate to a very simple webpage and "View Source". We can use something like "http://info.cern.ch/", but anything that does not have a lot of JavaScript and shows simple HTML structure will work.
-1. Student's open start.py from this repository
+1. Students should open start.py from this repository
     1. Walk through the contents of this file. It introduces comments and strings.
     1. Have the students add a string to put something within the h1 tag.
     1. Run the script at the console: `./start.py`
