@@ -23,15 +23,13 @@
 # Exercise 1
 # Add another string in the middle to make the title of the page "Patient Record"
 
-# Let's run this program
-
 # Exercise 2
 # Make the program print out to the screen when we run it
 
 # Exercise 3
-# Clean this program up a bit by introducing variables
+# Clean program up a bit by introducing variables
 
 # Exercise 4
 # Currently all of the output of the script gets printed to the screen (also called the console).
 # But by serving this script up using a webserver, the output of the program will be sent to the 
-# requesting users web browser and shown as a webpage.
+# requesting user's web browser and shown as a webpage.
