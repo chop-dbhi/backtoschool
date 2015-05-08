@@ -7,6 +7,13 @@ import cgi
 cgitb.enable()
 form = cgi.FieldStorage()
 
+
+# TODO Add code to update image according to POSTED variables
+
+
+
+# Begin output of webpage
+
 print('Content-type: text/html')
 print('')
 

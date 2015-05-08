@@ -23,7 +23,7 @@ This an introduction to bioinformatics programming for high school age students.
 	1. With server.py still running, have students navigate to http://localhost:8000/portal.py
 
 # TODO 
-Continue developing portion of project where students and zoom/filter capability to the webpage
+Continue developing portion of project where students add zoom/filter capability to the webpage
 
 
 # TODO
