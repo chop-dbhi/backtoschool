@@ -24,7 +24,7 @@ print("""<!DOCTYPE html>
         </head>
         <body>""")
 
-print('<img class=centered src=/img/lateral.png>')
+print('<img class=centered src=/img/oblique.png>')
 print('<form action=/ method=post>')
 print('</form>')
 
