@@ -1,0 +1,6 @@
+
+imgEditor/.idea/*
+
+*.pyc
+
+imgEditor/out.txt
