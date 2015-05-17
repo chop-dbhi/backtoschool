@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import os
-import logging
 import sys
 
 import wx
@@ -51,10 +50,7 @@ def main():
     app.MainLoop()
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception, ex:
-        logging.debug("main: " + `ex`)
+    main()
 
 
 

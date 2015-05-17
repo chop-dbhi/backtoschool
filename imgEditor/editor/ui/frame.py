@@ -1,13 +1,13 @@
 import weakref
-from wx.lib.wordwrap import wordwrap
 import wx
 
 from editor.constants import *
-import editor.ui.panel as panel
-import editor.data.image as imageInfo
+import editor.ui.panel_hello_world as panel_hello_world
+import editor.ui.panel_image as panel_image
+import editor.ui.panel_xray as panel_xray
 
 
-class Frame(wx.Frame):  # top-level window.
+class Frame(wx.Frame):
 
     def __init__(self, parent, title='Editor'):
 
@@ -17,41 +17,52 @@ class Frame(wx.Frame):  # top-level window.
 
         self.addMenu()
         self.addHotKeys()
-        self.addToolbar()
 
         w,h = wx.DisplaySize()
-        self.SetSize((0.7*w,0.7*h))
-        imageInfo.setSize((0.5*w,0.5*h))
+        self.SetSize((0.9*w,0.9*h))
 
-        mainPanel = panel.Panel(self)
-        self.mainPanel = weakref.ref(mainPanel) # To avoid a double delete when the frame is destroyed,
-                                                # only create a soft reference here,
-                                                # because a hard reference will automatically get generated.
+        self.addNotebook()
 
         self.Show()
 
 
-    def addToolbar(self):
+    def addNotebook(self):
 
-        tsize = (25,25)
-        self.toolbar = self.CreateToolBar(wx.TB_FLAT|wx.TB_TEXT)
+        notebook = wx.Notebook(self, style=wx.BK_TOP)
+        self.notebook = weakref.ref(notebook)
 
-        openBmp = wx.ArtProvider.GetBitmap(wx.ART_FILE_OPEN, wx.ART_TOOLBAR, tsize)
-        saveBmp = wx.ArtProvider.GetBitmap(wx.ART_FILE_SAVE, wx.ART_TOOLBAR, tsize)
-        resetBmp = wx.ArtProvider.GetBitmap(wx.ART_UNDO, wx.ART_TOOLBAR, tsize)
+        panel = panel_hello_world.Panel(notebook)
+        notebook.AddPage(panel, 'Hello, world!')
 
-        self.toolbar.SetToolBitmapSize(tsize)
+        panel = panel_image.Panel(notebook)
+        notebook.AddPage(panel, 'Image editing')
 
-        openIcon = self.toolbar.AddLabelTool(wx.ID_OPEN, "Open", openBmp, shortHelp="Open image file", longHelp="Open image file")
-        self.Bind(wx.EVT_TOOL, self.onOpen, openIcon)
+        panel = panel_xray.Panel(notebook)
+        notebook.AddPage(panel, 'X-ray editing')
 
-        saveIcon = self.toolbar.AddLabelTool(wx.ID_SAVE, "Save", saveBmp, shortHelp="Save image to file", longHelp="Save image to file")
-        self.Bind(wx.EVT_TOOL, self.onSave, saveIcon)
+        self.helloPageID = 0
+        self.imagePageID = 1
+        self.xrayPageID = 2
 
-        resetIcon = self.toolbar.AddLabelTool(wx.ID_RESET, "Reset", resetBmp, shortHelp="Reset image", longHelp="Reset image")
-        self.Bind(wx.EVT_TOOL, self.onReset, resetIcon)
+        self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.onPageChanged, notebook)
+        # Note: this
+        # notebook.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.onPageChanged)
+        # doesn't work correctly because one of the pages in the notebook itself has a notebook,
+        # and with the notebook.Bind setup the event intended to inner notebook actually goes to both.
+        # For an explanation of the differences please read:
+        # http://wiki.wxpython.org/self.Bind_vs._self.button.Bind
 
-        self.toolbar.Realize()
+    def onPageChanged(self, event):
+
+        selection = event.GetSelection()
+
+        if selection == self.helloPageID:
+            sys.stdout = sys.__stdout__
+            sys.stderr = sys.__stderr__
+        else:
+            self.notebook().GetPage(selection).grabOutput()
+
+        event.Skip() # make sure to propagate the event to upstream handlers
 
 
     def addMenu(self):
@@ -62,22 +73,15 @@ class Frame(wx.Frame):  # top-level window.
         menuBar = wx.MenuBar()
         fileMenu = wx.Menu()
 
-        menuOpen = fileMenu.Append(wx.ID_OPEN, '&Open image', 'Open image file')
-        self.Bind(wx.EVT_MENU, self.onOpen, menuOpen)
-
-        menuSave = fileMenu.Append(wx.ID_SAVE, '&Save image', 'Save image to file')
-        self.Bind(wx.EVT_MENU, self.onSave, menuSave)
-
         # on Mac OS both Exit and About menus will end up in the application menu
         # instead of where we've put them.
 
         menuExit = fileMenu.Append(wx.ID_EXIT,'E&xit\tCtrl+X', 'Quit ' + APP_NAME)
         self.Bind(wx.EVT_MENU, self.onExit, menuExit)
 
-        menuAbout = fileMenu.Append(wx.ID_ABOUT, '&About', 'About ' + APP_NAME)
-        self.Bind(wx.EVT_MENU, self.onAbout, menuAbout)
-
-        menuBar.Append(fileMenu, "File")
+        # on Mac File menu would end up empty, so don't add it.
+        if not IS_MAC:
+            menuBar.Append(fileMenu, "File")
         self.SetMenuBar(menuBar)
 
 
@@ -91,58 +95,3 @@ class Frame(wx.Frame):  # top-level window.
 
     def onExit(self, event):
         self.Close()
-
-
-    def onOpen(self, event):
-
-        dlg = wx.FileDialog(self,
-            message = 'Choose image file to open',
-            defaultDir = imageInfo.getImgDir(),  # tried using os.getcwd() (current working directory)
-                                                 # but that didn't work correctly on mac
-            defaultFile = '',
-            wildcard = 'Image files (*.jpeg,*.jpg,*.png)|*.jpeg;*.jpg;*.png',
-            style = wx.OPEN  # tried adding "|wx.CHANGE_DIR" to allow the dialog to change current working directory.
-                             # but that didn't work correctly on mac
-        )
-
-        if dlg.ShowModal() == wx.ID_OK:
-            imageInfo.setFile(dlg.GetPath())
-            imageInfo.loadImage()
-            self.mainPanel().displayImage()
-
-        dlg.Destroy()
-
-
-    def onSave(self, event):
-
-        dlg = wx.FileDialog(
-            self,
-            message = 'Save image to file',
-            defaultDir = imageInfo.getImgDir(),
-            defaultFile = '',
-            wildcard = 'Image files (*.png)|*.png',
-            style = wx.SAVE | wx.OVERWRITE_PROMPT)
-
-        if dlg.ShowModal() == wx.ID_OK:
-            imageInfo.setFile(dlg.GetPath())
-            imageInfo.saveImage()
-
-
-    def onReset(self, event):
-        imageInfo.loadImage()
-        self.mainPanel().displayImage()
-
-
-    def onAbout(self,event):
-
-        info = wx.AboutDialogInfo()
-        info.Name = APP_NAME
-        info.Version = VERSION
-        info.Copyright = COPYRIGHT
-        info.Description = wordwrap(DESCRIPTION, 400, wx.ClientDC(self))
-        info.WebSite = (COMPANY_URL, COMPANY_NAME)
-        info.Developers = DEVELOPERS
-
-        wx.AboutBox(info)
-
-

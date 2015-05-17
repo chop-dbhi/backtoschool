@@ -1,70 +1,74 @@
 import os
-import sys
 import wx
 
-_imgFileName = 'default.jpg'
-_imgDir = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])),'img')
-_imgFullPath = os.path.join(_imgDir, _imgFileName)
+from editor.constants import BASEDIR
 
-_w = 400
-_h = 300
+class ImageData:
 
-def setFile(path):
-    global _imgFullPath
-    global _imgFileName
-    global _imgDir
-    _imgFullPath = path
-    _imgDir, _imgFileName = os.path.split(path)
+    def __init__(self, size=(400,300), imgFileName='default.jpg', imgDir=''):
 
+        self.imgFileName = imgFileName
+        self.imgDir = imgDir
+        if self.imgDir == '':
+            self.imgDir = os.path.join(BASEDIR,'img')
+        self.imgFullPath = os.path.join(self.imgDir, self.imgFileName)
 
-def getImgDir():
-    return _imgDir
+        self.w, self.h = size
 
-def getImgFileName():
-    return _imgFileName
-
-def getImgFullPath():
-    return _imgFullPath
+        self.loadImage()
 
 
-def getBitmap():
-    bitmap = wx.BitmapFromImage(_image)
-    return bitmap
+    def getImgDir(self):
+        return self.imgDir
+
+    def getImgFileName(self):
+        return self.imgFileName
+
+    def getImgFullPath(self):
+        return self.imgFullPath
+
+    def getBitmap(self):
+        return wx.BitmapFromImage(self.image)
 
 
-def getPixels():
-    pixelData = _image.GetData()  # string of characters in RGBRGBRGB... format
-                                  # in the top-to-bottom, left-to-right order
-    pixelData = map(lambda ch: ord(ch), pixelData)  # convert to array of integers
-    return zip(*[iter(pixelData)]*3)  # split the array into [(R,G,B), (R,G,B),...]
+    def getPixels(self):
 
-def setPixels(pixels):
-    flattened = [value for pixel in pixels for value in pixel]  # we get an array of integers [(R,G,B), (R,G,B),...];
-                                                                # flatten it into [R,G,B,R,G,B,R,G,B,...] int array
-    pixelData = map(lambda ii: chr(ii), flattened)  # convert integers into ascii
-    pixelData = ''.join(pixelData)  # convert char array into a string
-    _image.SetData(pixelData)
+        pixelData = self.image.GetData()  # string of characters in RGBRGBRGB... format
+                                          # in the top-to-bottom, left-to-right order
+        pixelData = map(lambda ch: ord(ch), pixelData)  # convert to array of integers
+        return zip(*[iter(pixelData)]*3)  # split the array into [(R,G,B), (R,G,B),...]
 
 
-def setSize(size):
-    global _w,_h
-    _w,_h = size
+    def setPixels(self, pixels):
 
-def saveImage():
-    _image.SaveFile(_imgFullPath, wx.BITMAP_TYPE_PNG)
-
-
-def loadImage():
-    '''load image from the file specified by _imgFullPath'''
-
-    global _image
-
-    _image = wx.ImageFromStream(open(_imgFullPath, "rb"))
-
-    w,h = _image.GetWidth(), _image.GetHeight()
-    scale = min(_w/w, _h/h)
-    _image = _image.Scale(w*scale, h*scale, wx.IMAGE_QUALITY_HIGH)
+        flattened = [value for pixel in pixels for value in pixel]  # we get an array of integers [(R,G,B), (R,G,B),...];
+                                                                    # flatten it into [R,G,B,R,G,B,R,G,B,...] int array
+        pixelData = map(lambda ii: chr(ii), flattened)  # convert integers into ascii
+        pixelData = ''.join(pixelData)  # convert char array into a string
+        self.image.SetData(pixelData)
 
 
+    def saveImage(self, fullPath):
+
+        self.setPath(fullPath)
+        self.image.SaveFile(self.imgFullPath, wx.BITMAP_TYPE_PNG)
+
+
+    def loadImage(self, fullPath=''):
+
+        if fullPath!='':
+            self.setPath(fullPath)
+
+        self.image = wx.ImageFromStream(open(self.imgFullPath, "rb"))
+
+        w,h = self.image.GetWidth(), self.image.GetHeight()
+        scale = min(self.w/w, self.h/h)
+        self.image = self.image.Scale(w*scale, h*scale, wx.IMAGE_QUALITY_HIGH)
+
+
+    def setPath(self, fullPath):
+
+        self.imgFullPath = fullPath
+        self.imgDir, self.imgFileName = os.path.split(fullPath)
 
 
