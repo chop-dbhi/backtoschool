@@ -6,7 +6,7 @@ def applyFilter(pixels):
 
     for pixel in pixels:
 
-	(inputRed, inputGreen, inputBlue)  = pixel
+        (inputRed, inputGreen, inputBlue)  = pixel
 
         outputRed = outputGreen = outputBlue = (inputRed + inputGreen + inputBlue) / 3
 
@@ -15,7 +15,7 @@ def applyFilter(pixels):
         #outputGreen = min(outputGreen*2, 255)  # green-and-white
         #outputBlue = min(outputBlue*2, 255)  # blue-and-white
 
-	newPixel = (outputRed, outputGreen, outputBlue)
+        newPixel = (outputRed, outputGreen, outputBlue)
         bwPixels.append(newPixel)
 
     return bwPixels

@@ -4,3 +4,5 @@ imgEditor/.idea/*
 *.pyc
 
 imgEditor/out.txt
+
+imgEditor/oblique.png
