@@ -170,18 +170,31 @@ class Panel(scrolled.ScrolledPanel):
         if dlg.ShowModal() == wx.ID_OK:
             self.imageData.saveImage(dlg.GetPath())
 
+        dlg.Destroy()
+
 
     def onApply(self, event):
-        page = self.codeNotebook().CurrentPage
-        page.saveCode()
-        page.clearOutput()
-        filter = (bw, sepia, custom)[self.currentFilter]
-        self.applyFilter(filter)
+
+        # on Raspberry pi image processing will take a while, so use a busy cursor
+        wx.BeginBusyCursor()
+        try:
+            page = self.codeNotebook().CurrentPage
+            page.saveCode()
+            page.clearOutput()
+            filter = (bw, sepia, custom)[self.currentFilter]
+            self.applyFilter(filter)
+        finally:
+            wx.EndBusyCursor()
 
 
     def onReset(self, event):
-        self.imageData.loadImage()
-        self.displayImage()
+
+        wx.BeginBusyCursor()
+        try:
+            self.imageData.loadImage()
+            self.displayImage()
+        finally:
+            wx.EndBusyCursor()
 
 
     def grabOutput(self):

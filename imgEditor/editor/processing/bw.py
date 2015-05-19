@@ -1,6 +1,6 @@
 def applyFilter(pixels):
 
-    '''The simplest method of converting to B&W is to simply average the values: R = G = B = (R + G + B) / 3'''
+    '''The simplest method of converting to B&W is to average the values: R = G = B = (R + G + B) / 3'''
 
     bwPixels = []
 
