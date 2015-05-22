@@ -63,7 +63,6 @@ class Panel(panel_image.Panel):
 
         applyBmp = wx.ArtProvider.GetBitmap(wx.ART_GO_FORWARD, wx.ART_TOOLBAR, (25,25))
 
-
         button = GB.GradientButton(self, -1, applyBmp, label="Publish to Website")
         self.Bind(wx.EVT_BUTTON, self.onPublish, button)
         sizerV.Add(button, flag=wx.ALL, border=3)
@@ -72,13 +71,23 @@ class Panel(panel_image.Panel):
 
 
     def onApply(self, event):
-        self.codePanel().saveCode()
-        self.codePanel().clearOutput()
-        self.applyFilter(xray)
+        # on Raspberry pi image processing will take a while, so use a busy cursor
+        wx.BeginBusyCursor()
+        try:
+            self.codePanel().saveCode()
+            self.codePanel().clearOutput()
+            self.applyFilter(xray)
+        finally:
+            wx.EndBusyCursor()
 
 
     def onPublish(self, event):
-        self.imageData.saveImage(os.path.join(PUBLISH_DIR, self.imageData.getImgFileName()))
+
+        wx.BeginBusyCursor()
+        try:
+            self.imageData.saveImage(os.path.join(PUBLISH_DIR, self.imageData.getImgFileName()))
+        finally:
+            wx.EndBusyCursor()
 
 
     def grabOutput(self):
