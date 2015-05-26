@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Back to School</title>
+
+
+  <link rel="stylesheet" href="/Editr.js/editr.css">
+  
+</head>
+
+<body>
+
+  <div class="editr" data-item="backtoschool" data-files-html="index.html;" data-files-css="main.css;" data-files-js=""></div>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/ace.js"></script>
+  <script src="/js/ext-emmet.js"></script>
+  <script src="/Editr.js/libs/ext.emmet.js"></script>
+  <script src="/Editr.js/editr.js"></script>
+  <script>     
+    $('.editr').each(function() {
+    new Editr({ el: this, path:"projects" });});
+  </script>
+</body>
+</html>
