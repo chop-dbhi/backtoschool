@@ -34,7 +34,7 @@ class Panel(panel_image.Panel):
         imgSizer.Add(toolbar, flag=wx.EXPAND, proportion=0)
 
         w,h = wx.DisplaySize()
-        self.imageData = image.ImageData(size=(0.3*w,0.6*h), imgFileName='oblique.png',
+        self.imageData = image.ImageData(size=(0.3*w,0.6*h), imgFileName='lateral.png',
                                          imgDir = os.path.join(os.path.join(BASEDIR,'img'),'xrays'))
 
         bmp = wx.StaticBitmap(self, wx.ID_ANY, self.imageData.getBitmap())
