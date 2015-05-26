@@ -16,9 +16,9 @@ number = 63
 #print str(63)
 
 list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print str(list)
-print list[3]
-print list[6]
+#print str(list)
+#print list[3]
+#print list[6]
 
 #---------------------------------------#
 #--------math---------------------------#

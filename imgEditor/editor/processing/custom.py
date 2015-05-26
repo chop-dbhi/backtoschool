@@ -25,7 +25,7 @@ def applyFilter(pixels):
         newPixel[1] = outputGreen
         newPixel[2] = outputBlue
 
-	# add the new pixel to the resulting image
+        # add the new pixel to the resulting image
         newPixels.append(newPixel)
 
     return newPixels

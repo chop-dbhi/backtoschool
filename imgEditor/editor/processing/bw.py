@@ -11,13 +11,13 @@ def applyFilter(pixels):
         inputGreen = pixel[1]
         inputBlue = pixel[2]
 
-       # in a Black&White image, each pixel has the same value for Red, Green, and Blue.
-       # But what is that value?  
-       # Red = Green = Blue = ?
-       # The easiest method of calculating the new value is to average the old values: 
-       # newRed = newGreen = newBlue = (oldRed + oldGreen + oldBlue) / 3
+        # in a Black&White image, each pixel has the same value for Red, Green, and Blue.
+        # But what is that value?
+        # Red = Green = Blue = ?
+        # The easiest method of calculating the new value is to average the old values:
+        # newRed = newGreen = newBlue = (oldRed + oldGreen + oldBlue) / 3
 
-	average = (inputRed + inputGreen + inputBlue) / 3
+        average = (inputRed + inputGreen + inputBlue) / 3
 
         outputRed = average
         outputGreen = average
@@ -39,7 +39,7 @@ def applyFilter(pixels):
         # To make sure that a number is not bigger than 255, you can use the min function, for example:
         # newNumber = min(number, 255)
 
-	# add the new pixel to the resulting image
+        # add the new pixel to the resulting image
         newPixels.append(newPixel)
 
     return newPixels
