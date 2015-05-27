@@ -7,7 +7,9 @@ button.innerHTML = "Find Pin";
 
 // This sets up code (a function) that gets executed if the user clicks on the button
 button.onclick = function(){
+  // Find the img tag on the page that holds the x-ray
   var img = document.getElementById('xray');
+  // Change the img tag so that it shows another image
   img.src = '/backtoschool/img/lateral_pin.png';
 };
 
