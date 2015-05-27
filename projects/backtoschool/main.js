@@ -8,13 +8,13 @@ button.innerHTML = "Find Pin";
 // This sets up code (a function) that gets executed if the user clicks on the button
 button.onclick = function(){
   // Find the img tag on the page that holds the x-ray
-  var img = document.getElementById('xray');
+  var img = document.getElementById("xray");
   // Change the img tag so that it shows another image
-  img.src = '/backtoschool/img/lateral_pin.png';
+  img.src = "/backtoschool/img/lateral_pin.png";
 };
 
 // Here we find the spot on the page where we want to add the button
 var div = document.getElementById("xray_image");
 
-// Uncomment the line below to actually add the button to the page
+// ***Uncomment the line below to actually add the button to the page***
 // div.appendChild(button);
