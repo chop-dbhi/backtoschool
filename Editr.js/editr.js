@@ -117,7 +117,7 @@
             path: 'items',
 
             // ACE theme
-            theme: 'github',
+            theme: 'chrome',
 
             // ACE read mode
             readonly: false,
@@ -301,7 +301,7 @@
                         class: 'editr__editor editr__editor--' + (file.type || file.extension)
                     }).appendTo(el.content);
 
-                //require("ace/ext/emmet");
+                require("ace/ext/emmet");
 
                 aceEditor = ace.edit(textarea.attr('id'));
                 aceEditor.setTheme("ace/theme/" + opts.theme);
@@ -314,11 +314,11 @@
                 aceEditor.getSession().setUseWorker(false);
 				aceEditor.setShowPrintMargin(false);
 				aceEditor.setFontSize(15);
-                //aceEditor.on('change', _.debounce(function() {
-                //    if (data.activeItem !== -1) {
-                //        __.renderPreview(data.files.html[data.activeItem]);
-                //    }
-                //}, 250, false));
+                aceEditor.on('change', _.debounce(function() {
+                    if (data.activeItem !== -1) {
+                        __.renderPreview(data.files.html[data.activeItem]);
+                    }
+                }, 250, false));
 
                 return aceEditor;
             },
