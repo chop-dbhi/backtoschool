@@ -117,7 +117,7 @@
             path: 'items',
 
             // ACE theme
-            theme: 'clouds',
+            theme: 'github',
 
             // ACE read mode
             readonly: false,
@@ -301,7 +301,7 @@
                         class: 'editr__editor editr__editor--' + (file.type || file.extension)
                     }).appendTo(el.content);
 
-                require("ace/ext/emmet");
+                //require("ace/ext/emmet");
 
                 aceEditor = ace.edit(textarea.attr('id'));
                 aceEditor.setTheme("ace/theme/" + opts.theme);
