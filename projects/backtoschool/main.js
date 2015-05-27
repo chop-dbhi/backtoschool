@@ -1,4 +1,4 @@
-// This is JavaScript. It is a language that runs in the we browser
+// This is JavaScript. It is a language that runs in the web browser
 // and allows you to dynamically change the webpage based on events.
 
 // Here we create a button element
