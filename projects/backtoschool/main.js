@@ -11,7 +11,7 @@ button.onclick = function(){
   img.src = '/backtoschool/img/lateral_pin.png';
 };
 
-// Here we find the spot on the page we want to add the button
+// Here we find the spot on the page where we want to add the button
 var div = document.getElementById("xray_image");
 
 // Uncomment the line below to actually add the button to the page
