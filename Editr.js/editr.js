@@ -37,31 +37,31 @@
                     type: 'html',
                     extension: 'html',
                     fn: function(str, isEncoded) {
-                        str = str
-                            .replace(/body\b[^>]*>/, '<body><div class="body">')
-                            .replace('</body>', '</body>');
-
-                        str = __.obj('div').html(str);
-
-                        str.find('script, link, style').remove();
-
-                        if (!isEncoded) {
-
-                            if (str.find('.body').length) {
-                                str = str.find('.body').html();
-                            } else {
-                                str = str.html()
-                            }
-
-                            str = str
-                            // replace multiple empty lines with one empty line
-                            .replace(/[\r\n]+/gi, '\n')
-                            // remove first and last empty line
-                            .replace(/^[\r\n]|[\n\r]$/gi, '');
-                        } else {
-                            str = str.html();
-                        }
-
+                       //str = str
+                       //    .replace(/body\b[^>]*>/, '<body><div class="body">')
+                       //    .replace('</body>', '</body>');
+                       //
+                       //str = __.obj('div').html(str);
+                       //
+                       //str.find('script, link, style').remove();
+                       //
+                       //if (!isEncoded) {
+                       //
+                       //    if (str.find('.body').length) {
+                       //        str = str.find('.body').html();
+                       //    } else {
+                       //        str = str.html()
+                       //    }
+                       //
+                       //    str = str
+                       //    // replace multiple empty lines with one empty line
+                       //    .replace(/[\r\n]+/gi, '\n')
+                       //    // remove first and last empty line
+                       //    .replace(/^[\r\n]|[\n\r]$/gi, '');
+                       //} else {
+                       //    str = str.html();
+                       //}
+                       //
                         return str;
                     }
                 },
@@ -117,7 +117,7 @@
             path: 'items',
 
             // ACE theme
-            theme: 'github',
+            theme: 'clouds',
 
             // ACE read mode
             readonly: false,
@@ -304,7 +304,7 @@
                 require("ace/ext/emmet");
 
                 aceEditor = ace.edit(textarea.attr('id'));
-                aceEditor.setTheme("/themes/" + opts.theme);
+                aceEditor.setTheme("ace/theme/" + opts.theme);
                 aceEditor.getSession().setMode('ace/mode/' + (file.extension === 'js' ? 'javascript' : file.extension));
                 aceEditor.getSession().setUseWrapMode(true);
                 aceEditor.setReadOnly(opts.readonly);
@@ -313,12 +313,12 @@
                 aceEditor.setOption("enableEmmet", false);
                 aceEditor.getSession().setUseWorker(false);
 				aceEditor.setShowPrintMargin(false);
-				aceEditor.setFontSize(14);
-                aceEditor.on('change', _.debounce(function() {
-                    if (data.activeItem !== -1) {
-                        __.renderPreview(data.files.html[data.activeItem]);
-                    }
-                }, 250, false));
+				aceEditor.setFontSize(15);
+                //aceEditor.on('change', _.debounce(function() {
+                //    if (data.activeItem !== -1) {
+                //        __.renderPreview(data.files.html[data.activeItem]);
+                //    }
+                //}, 250, false));
 
                 return aceEditor;
             },
