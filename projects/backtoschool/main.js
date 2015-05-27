@@ -3,7 +3,6 @@
 
 // Here we create a button element
 var button = document.createElement("button");
-button.id = "pin";
 button.innerHTML = "Find Pin";
 
 // This sets up code (a function) that gets executed if the user clicks on the button
