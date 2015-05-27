@@ -1,5 +1,5 @@
 body {
-    background-image: url("/backtoschool/img/wood_background.png");
+    background-image: url("http://localhost:800/img/wood_background.png");
 }
 
 hr {
@@ -23,7 +23,7 @@ h3 {
 }
 
 #header {
-    background-image: url("/backtoschool/img/chop_header.png");
+    background-image: url("http://localhost:800l/img/chop_header.png");
     width: 100%;
     height: 115px;
 }
