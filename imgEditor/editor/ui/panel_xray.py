@@ -11,7 +11,11 @@ from editor.constants import *
 import editor.data.image as image
 import editor.ui.code_editor as panel_code
 import editor.ui.panel_image as panel_image
-import editor.processing.xray as xray
+
+if IS_FROZEN:
+    import xray
+else:
+    import editor.processing.xray as xray
 
 
 class Panel(panel_image.Panel):
@@ -63,7 +67,11 @@ class Panel(panel_image.Panel):
 
         applyBmp = wx.ArtProvider.GetBitmap(wx.ART_GO_FORWARD, wx.ART_TOOLBAR, (25,25))
 
-        button = GB.GradientButton(self, -1, applyBmp, label="Publish to Website")
+        if IS_FROZEN:
+            label = "Save to Desktop"
+        else:
+            label = "Publish to Website"
+        button = GB.GradientButton(self, -1, applyBmp, label=label)
         self.Bind(wx.EVT_BUTTON, self.onPublish, button)
         sizerV.Add(button, flag=wx.ALL, border=3)
 

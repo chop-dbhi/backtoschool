@@ -52,15 +52,13 @@ class Frame(wx.Frame):
         # For an explanation of the differences please read:
         # http://wiki.wxpython.org/self.Bind_vs._self.button.Bind
 
+        self.notebook().GetPage(0).grabOutput()
+
+
     def onPageChanged(self, event):
 
         selection = event.GetSelection()
-
-        if selection == self.helloPageID:
-            sys.stdout = sys.__stdout__
-            sys.stderr = sys.__stderr__
-        else:
-            self.notebook().GetPage(selection).grabOutput()
+        self.notebook().GetPage(selection).grabOutput()
 
         event.Skip() # make sure to propagate the event to upstream handlers
 
