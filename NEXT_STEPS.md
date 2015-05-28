@@ -50,26 +50,34 @@ At CHOP many of our applications "Backend" code is written using python, and our
 * [jQuery](http://jquery.com) A javascript library with excellent documentation that simplifies
 
 ### The Gamer
-Most people enjoy playing games. Whether they're on a console, computer, your phone or your browser, sometimes its nice to kick back and play.
+Most people enjoy playing games. Whether they're on a console, computer, your phone or your browser, sometimes its nice to kick back and play. PyGame is a very accessible toolkit to create games in python. Most developers these days are writing web-based games (using HTML5, javascript, CSS, etc).
 
 * [PyGame](http://pygame.org) - a toolkit that makes creating games in python easy and fun.
 * [HTML5](http://www.html5gamedevelopment.com/)
-  * quintus
-  * RPG.js - Create 2.5D Bitmap based "Zelda-like" games
+  * [Quintus](http://www.html5quintus.com/) - An easy to learn and fun to use game engine.
+  * [RPG.js](http://rpgjs.com/) - Create 2.5D Bitmap based "Zelda-like" games
 
 ### Data Cruncher
-People like to kick around terms like "big data" and "the cloud"
+People like to kick around terms like "big data" and "the cloud". What does big data really mean? Well, over the last few decades we've made incredible progress in collecting all sorts of data about different parts of the systems we build and interact with -- now what do we do with it? Finding interesting trends and information in huge datasets is something that the computer science world is really excited about. Part of working with these large data sets is storing or "persisting" the data in a database. Most applications you use have a persistence layer where data is stored and queryed. The other half is processing the data. Python is good for writing quick scripts to manipulate data because it is dynamically typed. That means you don't have to think too much about the "data types" (i.e. string, integer, float, boolean) that your data contains -- you can just get to work on it! Pandas is a great python package that  
 
- * pandas
+ * [Pandas](http://pandas.pydata.org/) Data analysis Package
+ * [PyData](http://pydata.org/downloads/) A site with a collection of different analysis packages for Python (including Pandas)
+ * [R](http://www.r-project.org) - A free statistics package.
 
 ### Data Viz Guru
+Crunching data can be fun and extremely useful, but sometimes information is best conveyed visually. Tons of work is being done to figure out how to effectively translate data analysis into visualization that people can quickly grasp at a glance. Data visualization is exciting because it combines the math and analysis of data crunching with the creativity of visualizations.
 
-* d3
+* [datavisualization.ch](http://datavisualization.ch/) -  A great site highlighting interesting approaches in data visualization.
+* [d3](http://d3js.org/) - An amazing javascript data visualization library. This library has a high learning curve, but the visualizations it can create are truly amazing. Check out some of the [top visualizations of 2014](http://www.pewresearch.org/fact-tank/2014/12/29/our-favorite-pew-research-center-data-visualizations-from-2014/) -- most of these are done with d3.
+* [iPython](http://ipython.org) - Mentioned above, this python tool makes turning your python code into visualizations quick and easy. You can use it in your web browser try out the "Notebook" version of it [here](https://try.jupyter.org/)
 
 ### Autamaton
+Writing software that runs on the web or in the terminal is a lot of fun, but what if you could write software to automatically unlock doors, water your plants, or alert you when someone comes into a room? Well you can! The computers we've been using today are called Raspberry Pi's. These machines are relatively inexpensive, but they pack a lot of features into a tiny package. Combined with a microcontroller like the Arduino you can build projects that do any variety of things. These projects usually require a bit of electrical engineering (like soldering and circuit design) but there are tons of easy projects to get you started.
 
-* raspberry pi
-* arduino
+* [Raspberry Pi](https://www.raspberrypi.org/) - The mini computer you used today!
+* [Arduino](https://www.arduino.cc/) - A collection of relatively inexpensive microcontrollers to build a huge variety of things.
+* [Sparkfun](https://www.sparkfun.com/) - A great supplier of components to build your projects.
+* [Instructables](http://www.instructables.com/tag/type-id/category-technology/) - A great set of projects of variable difficulty.
 
 
 @tjrivera
