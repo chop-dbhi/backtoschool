@@ -11,7 +11,6 @@ class Panel(wx.Panel):
         wx.Panel.__init__(self, parent, -1)
 
         self.fileName = os.path.join(PROCESSING_DIR, fileName)
-        self.outFileName = os.path.join(BASEDIR, 'out.txt')
 
         sizer = wx.BoxSizer(wx.VERTICAL)
 
