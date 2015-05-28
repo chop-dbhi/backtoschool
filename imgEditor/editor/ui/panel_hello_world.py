@@ -7,7 +7,13 @@ import weakref
 import wx.lib.scrolledpanel as scrolled
 import wx
 
+from editor.constants import IS_FROZEN
 import editor.ui.code_editor as code_editor
+
+if IS_FROZEN:
+    import hello
+else:
+    import editor.processing.hello as hello
 
 
 class Panel(scrolled.ScrolledPanel):
@@ -34,8 +40,13 @@ class Panel(scrolled.ScrolledPanel):
 
     def onApply(self, event):
         self.codePanel().saveCode()
-        self.codePanel().runStandaloneCode()
-        self.codePanel().reloadOutput()
+        self.codePanel().clearOutput()
+        reload(hello)
+
+
+    def grabOutput(self):
+        self.codePanel().grabOutput()
+
 
 
 

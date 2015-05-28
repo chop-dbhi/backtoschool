@@ -34,14 +34,6 @@ class Panel(wx.Panel):
         self.codeEditor().SaveFile(self.fileName, type=wx.richtext.RICHTEXT_TYPE_TEXT)
 
 
-    def runStandaloneCode(self):
-        os.system("python %(code)s > %(out)s" % {"code": self.fileName, "out": self.outFileName})
-
-
-    def reloadOutput(self):
-        self.stdOut().LoadFile(self.outFileName)
-
-
     def clearOutput(self):
         self.stdOut().Clear()
 
