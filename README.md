@@ -50,7 +50,7 @@ At CHOP many of our applications "Backend" code is written using Python, and our
 * [jQuery](http://jquery.com) A JavaScript library with excellent documentation that simplifies
 
 ### The Gamer
-Most people enjoy playing games. Whether they're on a console, computer, your phone or your browser, sometimes it's nice to kick back and play. PyGame is a very accessible toolkit to create games in python. Most developers these days are writing web-based games (using HTML5, JavaScript, CSS, etc).
+Most people enjoy playing games. Whether they're on a console, computer, your phone or your browser, sometimes it's nice to kick back and play. PyGame is a very accessible toolkit to create games in python. Many developers these days are writing web-based games (using HTML5, JavaScript, CSS, etc).
 
 * [PyGame](http://pygame.org) - A toolkit that makes creating games in python easy and fun.
 * [HTML5](http://www.html5gamedevelopment.com/)
