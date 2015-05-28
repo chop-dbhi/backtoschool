@@ -17,7 +17,7 @@ Today we got started writing code and manipulating images in python, we coded a 
 
 If this quick tutorial was at all interesting to you and you're looking to learn more, then good news! There are a ton of resources online for you to dig in and start learning more about programming.
 
-Whether you'd like to build a new game, automate a repititive task, create an amazing web page, or dive into an interesting set of data, there are a variety of tools and techniques that you can learn to build something awesome. Seriously, you can do it!
+Whether you'd like to build a new game, automate a repetitive task, create an amazing web page, or dive into an interesting set of data, there are a variety of tools and techniques that you can learn to build something awesome. Seriously, you can do it!
 
 Check out the list below for some helpful resources that will help you on your journey to building the "Next Big Thing"!
 
