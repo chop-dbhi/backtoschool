@@ -1,4 +1,6 @@
 # -*- mode: python -*-
+# This is a PyInstaller script to for packaging the code into a standalone application for Mac OS
+
 a = Analysis(['runapp.py'],
              pathex=['.'],
              hiddenimports=[],
@@ -10,7 +12,6 @@ a.datas += [('custom.py','editor/processing/custom.py','DATA')]
 a.datas += [('hello.py','editor/processing/hello.py','DATA')]
 a.datas += [('sepia.py','editor/processing/sepia.py','DATA')]
 a.datas += [('xray.py','editor/processing/xray.py','DATA')]
-
 
 pyz = PYZ(a.pure)
 exe = EXE(pyz,
