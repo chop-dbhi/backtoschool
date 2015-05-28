@@ -13,4 +13,4 @@ This an introduction to bioinformatics programming for high school age students.
 
 The Python Coding GUI used in the tutorial can be downloaded from the [releases page](https://github.com/chop-dbhi/backtoschool/releases).
 
-If you want to play around with the HTML/CSS/JavaScript editor used in the tutorial, there is [hosted version](http://chop-dbhi.github.io/backtoschool/).
+If you want to play around with the HTML/CSS/JavaScript editor used in the tutorial, there is a [hosted version](http://chop-dbhi.github.io/backtoschool/).
