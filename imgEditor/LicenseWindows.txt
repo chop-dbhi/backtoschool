@@ -1,4 +1,4 @@
-Copyright (c) 2014 The Children's Hospital of Philadelphia
+﻿Copyright (c) 2015 The Children's Hospital of Philadelphia
                    and individual contributors.
 
 All rights reserved.
@@ -146,7 +146,7 @@ PSF LICENSE AGREEMENT FOR PYTHON 2.7.8
    publicly, prepare derivative works, distribute, and otherwise use
    Python 2.7.8 alone or in any derivative version, provided, however,
    that PSF's License Agreement and PSF's notice of copyright, i.e.,
-   "Copyright © 2001-2014 Python Software Foundation; All Rights
+   "Copyright Â© 2001-2014 Python Software Foundation; All Rights
    Reserved" are retained in Python 2.7.8 alone or in any derivative
    version prepared by Licensee.
 
@@ -245,7 +245,7 @@ CNRI LICENSE AGREEMENT FOR PYTHON 1.6.1
    publicly, prepare derivative works, distribute, and otherwise use
    Python 1.6.1 alone or in any derivative version, provided, however,
    that CNRI's License Agreement and CNRI's notice of copyright, i.e.,
-   "Copyright © 1995-2001 Corporation for National Research
+   "Copyright Â© 1995-2001 Corporation for National Research
    Initiatives; All Rights Reserved" are retained in Python 1.6.1
    alone or in any derivative version prepared by Licensee.
    Alternately, in lieu of CNRI's License Agreement, Licensee may
@@ -302,7 +302,7 @@ CNRI LICENSE AGREEMENT FOR PYTHON 1.6.1
 
 ACCEPTCWI LICENSE AGREEMENT FOR PYTHON 0.9.0 THROUGH 1.2
 
-Copyright © 1991 - 1995, Stichting Mathematisch Centrum Amsterdam, The
+Copyright Â© 1991 - 1995, Stichting Mathematisch Centrum Amsterdam, The
 Netherlands.  All rights reserved.
 
 Permission to use, copy, modify, and distribute this software and its
@@ -992,13 +992,13 @@ MICROSOFT VISUAL C++ 2008 EXPRESS EDITION
 
 These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you.  Please read them.  They apply to the software named above, which includes the media on which you received it, if any.  The terms also apply to any Microsoft
 
-·	updates,
+Â·	updates,
 
-·	supplements,
+Â·	supplements,
 
-·	Internet-based services, and 
+Â·	Internet-based services, and 
 
-·	support services
+Â·	support services
 
 for this software, unless other terms accompany those items.  If so, those terms apply.
 
@@ -1016,47 +1016,47 @@ b.	Included Microsoft Programs.  The software contains other Microsoft programs.
 2.	ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.
 a.	Distributable Code.  The software contains code that you are permitted to distribute in programs you develop if you comply with the terms below.
 
-i.	Right to Use and Distribute.  The code and text files listed below are “Distributable Code.”
+i.	Right to Use and Distribute.  The code and text files listed below are â€œDistributable Code.â€
 
-·	REDIST.TXT Files.  You may copy and distribute the object code form of code listed in REDIST.TXT files.
+Â·	REDIST.TXT Files.  You may copy and distribute the object code form of code listed in REDIST.TXT files.
 
-·	Sample Code.  You may modify, copy, and distribute the source and object code form of code marked as “sample.”
+Â·	Sample Code.  You may modify, copy, and distribute the source and object code form of code marked as â€œsample.â€
 
-·	Microsoft Merge Modules.  You may copy and distribute the unmodified output of Microsoft Merge Modules.
+Â·	Microsoft Merge Modules.  You may copy and distribute the unmodified output of Microsoft Merge Modules.
 
-·	MFCs, ATLs and CRTs.  You may modify the source code form of Microsoft Foundation Classes (MFCs), Active Template Libraries (ATLs), and C runtimes (CRTs) to design, develop and test your programs, and copy and distribute the object code form of your modified files under a new name.
+Â·	MFCs, ATLs and CRTs.  You may modify the source code form of Microsoft Foundation Classes (MFCs), Active Template Libraries (ATLs), and C runtimes (CRTs) to design, develop and test your programs, and copy and distribute the object code form of your modified files under a new name.
 
-·	Third Party Distribution.  You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.
+Â·	Third Party Distribution.  You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.
 
 ii.	Distribution Requirements.  For any Distributable Code you distribute, you must
 
-·	add significant primary functionality to it in your programs;
+Â·	add significant primary functionality to it in your programs;
 
-·	for any Distributable Code having a filename extension of .lib, distribute only the results of running such Distributable Code through a linker with your program;
+Â·	for any Distributable Code having a filename extension of .lib, distribute only the results of running such Distributable Code through a linker with your program;
 
-·	distribute Distributable Code included in a setup program only as part of that setup program without modification;
+Â·	distribute Distributable Code included in a setup program only as part of that setup program without modification;
 
-·	require distributors and external end users to agree to terms that protect it at least as much as this agreement; 
+Â·	require distributors and external end users to agree to terms that protect it at least as much as this agreement; 
 
-·	display your valid copyright notice on your programs; and
+Â·	display your valid copyright notice on your programs; and
 
-·	indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.
+Â·	indemnify, defend, and hold harmless Microsoft from any claims, including attorneysâ€™ fees, related to the distribution or use of your programs.
 
 iii.	Distribution Restrictions.  You may not
 
-·	alter any copyright, trademark or patent notice in the Distributable Code; 
+Â·	alter any copyright, trademark or patent notice in the Distributable Code; 
 
-·	use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft; 
+Â·	use Microsoftâ€™s trademarks in your programsâ€™ names or in a way that suggests your programs come from or are endorsed by Microsoft; 
 
-·	distribute Distributable Code to run on a platform other than Microsoft operating systems, run-time technologies, or application platforms;
+Â·	distribute Distributable Code to run on a platform other than Microsoft operating systems, run-time technologies, or application platforms;
 
-·	include Distributable Code in malicious, deceptive or unlawful programs; or
+Â·	include Distributable Code in malicious, deceptive or unlawful programs; or
 
-·	modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License.  An Excluded License is one that requires, as a condition of use, modification or distribution, that
+Â·	modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License.  An Excluded License is one that requires, as a condition of use, modification or distribution, that
 
-·	the code be disclosed or distributed in source code form; or 
+Â·	the code be disclosed or distributed in source code form; or 
 
-·	others have the right to modify it.
+Â·	others have the right to modify it.
 
 3.	INTERNET-BASED SERVICES.  Microsoft provides Internet-based services with the software.  It may change or cancel them at any time.
 
@@ -1064,33 +1064,33 @@ a.	Consent for Internet-Based Services.  The software feature described below co
 
 i.	Computer Information.  The following feature uses Internet protocols, which send to the appropriate systems computer information, such as your Internet protocol address, the type of operating system, browser and name and version of the software you are using, and the language code of the device where you installed the software.  Microsoft uses this information to make the Internet-based service available to you.
 
-Real Simple Syndication (“RSS”) Feed.  This software start page contains updated content that is supplied by means of an RSS feed online from Microsoft.
+Real Simple Syndication (â€œRSSâ€) Feed.  This software start page contains updated content that is supplied by means of an RSS feed online from Microsoft.
 
 4.	PRODUCT KEYS.  The software requires a key to install or access it.  You are responsible for the use of the keys assigned to you.  You should not share the keys with third parties.
 
 5.	MANDATORY ACTIVATION.  TO PREVENT THE UNLICENSED USE, YOU WILL NOT BE ABLE TO USE THE SOFTWARE IF YOU DO NOT ACTIVATE IT AS DESCRIBED DURING INSTALLATION.  You can activate the software by Internet or telephone; Internet and telephone service charges may apply.  Some changes to your computer components or the software may require you to reactivate the software.  THE SOFTWARE WILL REMIND YOU TO ACTIVATE UNTIL YOU DO.
 
-6.	SQL SERVER BENCHMARK TESTING.  You must obtain Microsoft’s prior written approval to disclose to a third party the results of any benchmark test of the SQL Server software that accompanies this software. 
+6.	SQL SERVER BENCHMARK TESTING.  You must obtain Microsoftâ€™s prior written approval to disclose to a third party the results of any benchmark test of the SQL Server software that accompanies this software. 
 
 7.	MICROSOFT .NET FRAMEWORK SOFTWARE.  The software contains Microsoft .NET Framework  software.  This software is part of Windows.  The license terms for Windows apply to your use of this .NET Framework component.
 
-8.	MICROSOFT .NET FRAMEWORK BENCHMARK TESTING.  The software includes the .NET Framework component of the Windows operating systems (“.NET Component”).  You may conduct internal benchmark testing of the .NET (“.NET Component”).  You may disclose the results of any benchmark test of the .NET Component, provided that you comply with the following terms:  (1) you must disclose all the information necessary for replication of the tests, including complete and accurate details of your benchmark testing methodology, the test scripts/cases, tuning parameters applied, hardware and software platforms tested, the name and version number of any third party testing tool used to conduct the testing, and complete source code for the benchmark suite/harness that is developed by or for you and used to test both the .NET Component and the competing implementation(s); (2) you must disclose the date(s) that you conducted the benchmark tests, along with specific version information for all Microsoft software products tested, including the .NET Component; (3) your benchmark testing was performed using all performance tuning and best practice guidance set forth in the product documentation and/or on Microsoft’s support web sites, and uses the latest updates, patches and fixes available for the .NET Component and the relevant Microsoft operating system; (4) it shall be sufficient if you make the disclosures provided for above at a publicly available location such as a website, so long as every public disclosure of the results of your benchmark test expressly identifies the public site containing all required disclosures; and (5) nothing in this provision shall be deemed to waive any other right that you may have to conduct benchmark testing.  The foregoing obligations shall not apply to your disclosure of the results of any customized benchmark test of the .NET Component, whereby such disclosure is made under confidentiality in conjunction with a bid request by a prospective customer, such customer’s application(s) are specifically tested and the results are only disclosed to such specific customer.  Notwithstanding any other agreement you may have with Microsoft, if you disclose such benchmark test results, Microsoft shall have the right to disclose the results of benchmark tests it conducts of your products that compete with the .NET Component, provided it complies with the same conditions above.
+8.	MICROSOFT .NET FRAMEWORK BENCHMARK TESTING.  The software includes the .NET Framework component of the Windows operating systems (â€œ.NET Componentâ€).  You may conduct internal benchmark testing of the .NET (â€œ.NET Componentâ€).Â  You may disclose the results of any benchmark test of the .NET Component, provided that you comply with the following terms:Â  (1)Â you must disclose all the information necessary for replication of the tests, including complete and accurate details of your benchmark testing methodology,Â the test scripts/cases, tuning parameters applied, hardware and software platforms tested, the name and version number of any third party testing tool used to conduct the testing, and complete source code for the benchmark suite/harness that is developed by or for you and used to test both the .NET Component and the competing implementation(s); (2) you must disclose the date(s) that you conducted the benchmarkÂ tests, along with specific version information for all Microsoft software products tested, including the .NET Component; (3) your benchmark testing was performed using all performance tuning and best practice guidance set forth in the product documentation and/or on Microsoftâ€™s support web sites, and uses the latest updates, patches and fixes available for the .NET Component and the relevant Microsoft operating system; (4) it shall be sufficient if you make the disclosures provided for above at a publicly available location such as a website, so long as every public disclosure of the results of your benchmark test expressly identifies the public site containing all required disclosures; and (5) nothing in this provision shall be deemed to waive any other right that you may have to conduct benchmark testing.Â  The foregoing obligations shall not apply to your disclosure of the results of any customized benchmark test of the .NET Component, whereby such disclosure is made under confidentiality in conjunction with a bid request by a prospective customer, such customerâ€™s application(s) are specifically tested and the results are only disclosed to such specific customer.  Notwithstanding any other agreement you may have with Microsoft, if you disclose such benchmark test results, Microsoft shall have the right to disclose the results of benchmark tests it conducts of your products that compete with the .NET Component, provided it complies with the same conditions above.
 
 9.	Scope of License.  The software is licensed, not sold. This agreement only gives you some rights to use the software.  Microsoft reserves all other rights.  Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement.  In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways.    You may not work around any technical limitations in the software.  For example, Microsoft has technically limited or disabled extensibility for the software, and so you may not extend the software by, among other things, loading or injecting into the software any non-Microsoft add-ins, macros, or packages; modifying the software registry settings; or adding features or functionality equivalent to that found in other Visual Studio products.
 
 You also may not
 
-·	reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
+Â·	reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
 
-·	make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;
+Â·	make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;
 
-·	publish the software for others to copy;
+Â·	publish the software for others to copy;
 
-·	rent, lease or lend the software;
+Â·	rent, lease or lend the software;
 
-·	transfer the software or this agreement to any third party; or
+Â·	transfer the software or this agreement to any third party; or
 
-·	use the software for commercial software hosting services.
+Â·	use the software for commercial software hosting services.
 
 10.	BACKUP COPY.  You may make one backup copy of the software.  You may use it only to reinstall the software.
 
@@ -1098,7 +1098,7 @@ You also may not
 
 12.	Export Restrictions.  The software is subject to United States export laws and regulations.  You must comply with all domestic and international export laws and regulations that apply to the software.  These laws include restrictions on destinations, end users and end use.  For additional information, see www.microsoft.com/exporting.
 
-13.	SUPPORT SERVICES. Because this software is “as is,” we may not provide support services for it.
+13.	SUPPORT SERVICES. Because this software is â€œas is,â€ we may not provide support services for it.
 
 14.	Entire Agreement.  This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
 
@@ -1110,15 +1110,15 @@ b.	Outside the United States.  If you acquired the software in any other country
 
 16.	Legal Effect.  This agreement describes certain legal rights.  You may have other rights under the laws of your country.  You may also have rights with respect to the party from whom you acquired the software.  This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.
 
-17.	Disclaimer of Warranty.   The software is licensed “as-is.”  You bear the risk of using it.  Microsoft gives no express warranties, guarantees or conditions.  You may have additional consumer rights under your local laws which this agreement cannot change.  To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
+17.	Disclaimer of Warranty.   The software is licensed â€œas-is.â€  You bear the risk of using it.  Microsoft gives no express warranties, guarantees or conditions.  You may have additional consumer rights under your local laws which this agreement cannot change.  To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
 
 18.	Limitation on and Exclusion of Remedies and Damages.  You can recover from Microsoft and its suppliers only direct damages up to U.S. $5.00.  You cannot recover any other damages, including consequential, lost profits, special, indirect or incidental damages.
 
 This limitation applies to
 
-·	anything related to the software, services, content (including code) on third party Internet sites, or third party programs; and
+Â·	anything related to the software, services, content (including code) on third party Internet sites, or third party programs; and
 
-·	claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
+Â·	claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
 It also applies even if Microsoft knew or should have known about the possibility of the damages.  The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
 
 
