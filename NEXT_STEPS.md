@@ -18,11 +18,11 @@ Check out the list below for some helpful resources that will help you on your j
 
 ### The Basics
 
-* Python - An easy to learn programming language with a ton of capabilities. We got to play with a bit of python code today. Checkout our the [releases](https://github.com/chop-dbhi/backtoschool/releases) section of our github repository to download a version of the Python GUI we used today on your own computer.
-  * iPython - write python scripts in your browser!
-* Web Technologies (HTML/Javascript/CSS)
-* Git - "Source code management" Keep track of the changes you make to your code. Make it easy to share your code and collaborate with other programmers
-* Github - A website that makes it easy to share git repositories. Check github for a wealth of example code from a wide variety of organizations (CHOP, Google, Facebook, Microsoft, etc.)
+* [Python](http://python.org) - An easy to learn programming language with a ton of capabilities. We got to play with a bit of python code today. Checkout our the [releases](https://github.com/chop-dbhi/backtoschool/releases) section of our github repository to download a version of the Python GUI we used today on your own computer.
+  * [iPython](http://ipython.org/) - write python scripts in your browser!
+* [Web Technologies](https://developer.mozilla.org/) (HTML/Javascript/CSS) - Mozilla (the organization that created Firefox) has an excellent resource for all things Web related.
+* [Git](https://git-scm.com) - "Source code management" Keep track of the changes you make to your code. Make it easy to share your code and collaborate with other programmers. Check out the [try git](http://try.github.com/) link to jump right in!
+* [Github](https://github.com) - A website that makes it easy to share git repositories. Check github for a wealth of example code from a wide variety of organizations (CHOP, Google, Facebook, Microsoft, etc.)
 
 ### Online Learning
 
@@ -48,7 +48,7 @@ Most people enjoy playing games. Whether they're on a console, computer, your ph
 
 
 * [PyGame](http://pygame.org) - a toolkit that makes creating games in python easy and fun.
-* (HTML5 + Javascript + CSS)[http://www.html5gamedevelopment.com/]
+* [HTML5](http://www.html5gamedevelopment.com/)
   * quintus
   * RPG.js - Create 2.5D Bitmap based "Zelda-like" games
 
