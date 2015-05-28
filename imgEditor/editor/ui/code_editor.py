@@ -10,8 +10,8 @@ class Panel(wx.Panel):
     def __init__(self, parent, fileName):
         wx.Panel.__init__(self, parent, -1)
 
-        self.fileName = os.path.join(os.path.join(os.path.join(BASEDIR,'editor'),'processing'),fileName)
-        self.outFileName = os.path.join(BASEDIR,'out.txt')
+        self.fileName = os.path.join(PROCESSING_DIR, fileName)
+        self.outFileName = os.path.join(BASEDIR, 'out.txt')
 
         sizer = wx.BoxSizer(wx.VERTICAL)
 
