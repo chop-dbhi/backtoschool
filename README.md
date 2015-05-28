@@ -80,4 +80,3 @@ Writing software that runs on the web or in the terminal is a lot of fun, but wh
 * [Instructables](http://www.instructables.com/tag/type-id/category-technology/) - A great set of projects of variable difficulty.
 
 
-@tjrivera
