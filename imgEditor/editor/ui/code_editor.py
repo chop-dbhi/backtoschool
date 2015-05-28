@@ -10,8 +10,7 @@ class Panel(wx.Panel):
     def __init__(self, parent, fileName):
         wx.Panel.__init__(self, parent, -1)
 
-        self.fileName = os.path.join(os.path.join(os.path.join(BASEDIR,'editor'),'processing'),fileName)
-        self.outFileName = os.path.join(BASEDIR,'out.txt')
+        self.fileName = os.path.join(PROCESSING_DIR, fileName)
 
         sizer = wx.BoxSizer(wx.VERTICAL)
 
@@ -32,14 +31,6 @@ class Panel(wx.Panel):
 
     def saveCode(self):
         self.codeEditor().SaveFile(self.fileName, type=wx.richtext.RICHTEXT_TYPE_TEXT)
-
-
-    def runStandaloneCode(self):
-        os.system("python %(code)s > %(out)s" % {"code": self.fileName, "out": self.outFileName})
-
-
-    def reloadOutput(self):
-        self.stdOut().LoadFile(self.outFileName)
 
 
     def clearOutput(self):

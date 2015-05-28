@@ -8,11 +8,17 @@ import wx.lib.scrolledpanel as scrolled
 import wx
 
 from editor.constants import *
-import editor.processing.bw as bw
-import editor.processing.custom as custom
 import editor.data.image as image
 import editor.ui.code_editor as panel_code
-import editor.processing.sepia as sepia
+
+if IS_FROZEN:
+    import bw
+    import custom
+    import sepia
+else:
+    import editor.processing.bw as bw
+    import editor.processing.custom as custom
+    import editor.processing.sepia as sepia
 
 
 class Panel(scrolled.ScrolledPanel):
@@ -140,10 +146,14 @@ class Panel(scrolled.ScrolledPanel):
 
     def onOpen(self, event):
 
+        if IS_FROZEN:
+            dir = PUBLISH_DIR
+        else: dir = self.imageData.getImgDir()
+
         dlg = wx.FileDialog(self,
                             message = 'Choose image file to open',
-                            defaultDir = self.imageData.getImgDir(),  # tried using os.getcwd() (current working directory)
-                                                                 # but that didn't work correctly on mac
+                            defaultDir = dir,  # tried using os.getcwd() (current working directory)
+                                               # but that didn't work correctly on mac
                             defaultFile = '',
                             wildcard = 'Image files (*.jpeg,*.jpg,*.png)|*.jpeg;*.jpg;*.png',
                             style = wx.OPEN  # tried adding "|wx.CHANGE_DIR" to allow the dialog to change current working directory.
@@ -159,10 +169,14 @@ class Panel(scrolled.ScrolledPanel):
 
     def onSave(self, event):
 
+        if IS_FROZEN:
+            dir = PUBLISH_DIR
+        else: dir = self.imageData.getImgDir()
+
         dlg = wx.FileDialog(
             self,
             message = 'Save image to file',
-            defaultDir = self.imageData.getImgDir(),
+            defaultDir = dir,
             defaultFile = '',
             wildcard = 'Image files (*.png)|*.png',
             style = wx.SAVE | wx.OVERWRITE_PROMPT)

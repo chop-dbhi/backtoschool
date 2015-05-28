@@ -5,7 +5,7 @@ https://github.com/chop-dbhi/backtoschool
 
 ### Continue at home
 
-If you'd like to continue at home check out our [releases](https://github.com/chop-dbhi/backtoschool/releases) page for a copy of the python project you worked on today.
+If you'd like to continue at home check out our releases page at https://github.com/chop-dbhi/backtoschool/releases for a copy of the python project you worked on today. You can also continue to play around with webpage editor at http://chop-dbhi.github.io/backtoschool/. Take a look at the JavaScript tab to learn about writing code to modify webpages on the fly.
 
 ---
 
@@ -13,7 +13,7 @@ We hope you enjoyed our introduction to the world of programming. Our team uses 
 
 The best part about our job is the wide variety of tools and technologies that we get to use to solve these problems, their low barrier to entry and the positive impact it has on children's health. Whether you're crunching a huge set of numbers, manipulating imagery, or building a sleek new web application. It's amazing how easy it is to get started coding new solutions to tough problems -- no matter what those problems might be and no matter how much experience you might have trying to solve them.
 
-Today we got started writing code and manipulating images in python, we coded a web page with HTML, and styled it with CSS. We also included some additional javascript in our demo that we encourage you to explore after our workshop. Javascript allows a coder to dynamically alter the content of a web page beyond what standard HTML might allow. Most of the websites you visit today make heavy use of javascript to create dynamic, interactive user interfaces. Take a look at the "javascript" tab in our demo for an example of that interactivity.
+Today we got started writing code and manipulating images in python, we coded a web page with HTML, and styled it with CSS. We also included some additional JavaScript in our demo that we encourage you to explore after our workshop. JavaScript allows a coder to dynamically alter the content of a web page beyond what standard HTML might allow. Most of the websites you visit today make heavy use of JavaScript to create dynamic, interactive user interfaces. Take a look at the "JavaScript" tab in our demo for an example of that interactivity.
 
 If this quick tutorial was at all interesting to you and you're looking to learn more, then good news! There are a ton of resources online for you to dig in and start learning more about programming.
 
@@ -40,14 +40,14 @@ Check out the list below for some helpful resources that will help you on your j
 * [Udacity](http://www.udacity.com) ($)
 
 ### Web Programmer
-So many applications that we use every day now live on the web. The web provides a fantastic platform for developing tools whether you are using a mac, pc, or mobile device. Many of these applications utilize a wide variety of technologies. Usually these technologies are broken into two categories "Backend" -- which is the server code that pushes web pages to the browser or "Frontend" which is client code that runs in your web browser. Generally, python is used to create "Backend" code, and HTML+CSS+Javascript can be used to create "Frontend" applications. Javascript is unique in that you can create *both* the server code (using a framework called [node.js](https://nodejs.org)) and the client code with one language.
+So many applications that we use every day now live on the web. The web provides a fantastic platform for developing tools whether you are using a mac, pc, or mobile device. Many of these applications utilize a wide variety of technologies. Usually these technologies are broken into two categories "Backend" -- which is the server code that pushes web pages to the browser or "Frontend" which is client code that runs in your web browser. Generally, python is used to create "Backend" code, and HTML+CSS+JavaScript can be used to create "Frontend" applications. Javascript is unique in that you can create *both* the server code (using a framework called [node.js](https://nodejs.org)) and the client code with one language.
 
-At CHOP many of our applications "Backend" code is written using python, and our "Frontend" code is a combination of HTML, CSS, and Javascript. Take a look at our github page for examples of our work.
+At CHOP many of our applications "Backend" code is written using python, and our "Frontend" code is a combination of HTML, CSS, and JavaScript. Take a look at our github page for examples of our work.
 
-* [Django](http://djangoproject.com) Full featured web framework. This project is a good place to start. You'll find that working with django you'll touch on a lot of interesting technologies: html/css/javascript, web APIs, databases, etc.
+* [Django](http://djangoproject.com) Full featured web framework. This project is a good place to start. You'll find that working with django you'll touch on a lot of interesting technologies: HTML/CSS/JavaScript, web APIs, databases, etc.
 * [Flask](http://flask.pocoo.org) Like django but with not as many bells and whistles.
-* [Twitter's Bootstrap](http://getbootstrap.com) HTML + CSS + Javascript framework used to quickly develop professional looking web pages.
-* [jQuery](http://jquery.com) A javascript library with excellent documentation that simplifies
+* [Twitter's Bootstrap](http://getbootstrap.com) HTML + CSS + JavaScript framework used to quickly develop professional looking web pages.
+* [jQuery](http://jquery.com) A JavaScript library with excellent documentation that simplifies
 
 ### The Gamer
 Most people enjoy playing games. Whether they're on a console, computer, your phone or your browser, sometimes its nice to kick back and play. PyGame is a very accessible toolkit to create games in python. Most developers these days are writing web-based games (using HTML5, javascript, CSS, etc).
@@ -58,7 +58,7 @@ Most people enjoy playing games. Whether they're on a console, computer, your ph
   * [RPG.js](http://rpgjs.com/) - Create 2.5D Bitmap based "Zelda-like" games
 
 ### Data Cruncher
-People like to kick around terms like "big data" and "the cloud". What does big data really mean? Well, over the last few decades we've made incredible progress in collecting all sorts of data about different parts of the systems we build and interact with -- now what do we do with it? Finding interesting trends and information in huge datasets is something that the computer science world is really excited about. Part of working with these large data sets is storing or "persisting" the data in a database. Most applications you use have a persistence layer where data is stored and queryed. The other half is processing the data. Python is good for writing quick scripts to manipulate data because it is dynamically typed. That means you don't have to think too much about the "data types" (i.e. string, integer, float, boolean) that your data contains -- you can just get to work on it! Pandas is a great python package that  
+People like to kick around terms like "big data" and "the cloud". What does big data really mean? Well, over the last few decades we've made incredible progress in collecting all sorts of data about different parts of the systems we build and interact with -- now what do we do with it? Finding interesting trends and information in huge datasets is something that the computer science world is really excited about. Part of working with these large data sets is storing or "persisting" the data in a database. Most applications you use have a persistence layer where data is stored and queried. The other half is processing the data. Python is good for writing quick scripts to manipulate data because it is dynamically typed. That means you don't have to think too much about the "data types" (i.e. string, integer, float, boolean) that your data contains -- you can just get to work on it! Pandas is a great python package that  
 
  * [Pandas](http://pandas.pydata.org/) Data analysis Package
  * [PyData](http://pydata.org/downloads/) A site with a collection of different analysis packages for Python (including Pandas)
