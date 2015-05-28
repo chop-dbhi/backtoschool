@@ -5,7 +5,7 @@ https://github.com/chop-dbhi/backtoschool
 
 ### Continue at home
 
-If you'd like to continue at home check out our releases page at https://github.com/chop-dbhi/backtoschool/releases for a copy of the python project you worked on today. You can also continue to play around with webpage editor at http://chop-dbhi.github.io/backtoschool/. Take a look at the JavaScript tab to learn about writing code to modify webpages on the fly.
+If you'd like to continue at home check out our releases page at https://github.com/chop-dbhi/backtoschool/releases for a copy of the python project you worked on today. You can also continue to play around with the webpage editor at http://chop-dbhi.github.io/backtoschool/. Take a look at the JavaScript tab to learn about writing code to modify webpages on the fly.
 
 ---
 
