@@ -3,6 +3,12 @@ Where do I go from here?
 
 https://github.com/chop-dbhi/backtoschool
 
+### Continue at home
+
+If you'd like to continue at home ** check out our [releases](https://github.com/chop-dbhi/backtoschool/releases) page ** for a copy of the python project you worked on today.
+
+---
+
 We hope you enjoyed our introduction to the world of programming. Our team uses a wide variety of tools to try and solve complex problems in healthcare. We're really excited to have the opportunity to show you a small slice of the toolkit we use to tackle these tough problems.
 
 The best part about our job is the wide variety of tools and technologies that we get to use to solve these problems and their low barrier to entry. Whether you're crunching a huge set of numbers, manipulating imagery, or building a sleek new web application. It's amazing how easy it is to get started coding new solutions to tough problems -- no matter what those problems might be and no matter how much experience you might have trying to solve them.
@@ -33,7 +39,7 @@ Check out the list below for some helpful resources that will help you on your j
 * [Codeacademy](http://www.codeacademy.com) (Mostly Free)
 * [Udacity](http://www.udacity.com) ($)
 
-### Web Programming
+### Web Programmer
 So many applications that we use every day now live on the web. The web provides a fantastic platform for developing tools whether you are using a mac, pc, or mobile device. Many of these applications utilize a wide variety of technologies. Usually these technologies are broken into two categories "Backend" -- which is the server code that pushes web pages to the browser or "Frontend" which is client code that runs in your web browser. Generally, python is used to create "Backend" code, and HTML+CSS+Javascript can be used to create "Frontend" applications. Javascript is unique in that you can create *both* the server code (using a framework called [node.js](https://nodejs.org)) and the client code with one language.
 
 At CHOP many of our applications "Backend" code is written using python, and our "Frontend" code is a combination of HTML, CSS, and Javascript. Take a look at our github page for examples of our work.
@@ -46,13 +52,13 @@ At CHOP many of our applications "Backend" code is written using python, and our
 ### The Gamer
 Most people enjoy playing games. Whether they're on a console, computer, your phone or your browser, sometimes its nice to kick back and play.
 
-
 * [PyGame](http://pygame.org) - a toolkit that makes creating games in python easy and fun.
 * [HTML5](http://www.html5gamedevelopment.com/)
   * quintus
   * RPG.js - Create 2.5D Bitmap based "Zelda-like" games
 
 ### Data Cruncher
+People like to kick around terms like "big data" and "the cloud"
 
  * pandas
 
