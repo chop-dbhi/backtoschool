@@ -20,9 +20,9 @@
 									<key>CHILDREN</key>
 									<array/>
 									<key>GID</key>
-									<integer>12</integer>
+									<integer>80</integer>
 									<key>PATH</key>
-									<string>dist/ImageEditor.app</string>
+									<string>../dist/ImageEditor.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
