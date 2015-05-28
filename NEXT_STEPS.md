@@ -26,9 +26,11 @@ Check out the list below for some helpful resources that will help you on your j
 
 ### Online Learning
 
+* [Khan Academy](https://www.khanacademy.org/) (Free) Try the "Hour of Code" under computing!
+* [code.org](http://code.org/) (Free) Great web based "studio"
+* [edX.org](http://edX.org) (Free) Learn fundamental Computer Science principles
 * [Coursera](http://coursera.org) (Mostly free)
 * [Codeacademy](http://www.codeacademy.com) (Mostly Free)
-* [edX.org](http://edX.org) (Free)
 * [Udacity](http://www.udacity.com) ($)
 
 ### Web Programming
