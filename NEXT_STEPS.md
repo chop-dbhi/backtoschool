@@ -18,7 +18,7 @@ Check out the list below for some helpful resources that will help you on your j
 
 ### The Basics
 
-* Python - An easy to learn programming language with a ton of capabilities.
+* Python - An easy to learn programming language with a ton of capabilities. We got to play with a bit of python code today. Checkout our the [releases](https://github.com/chop-dbhi/backtoschool/releases) section of our github repository to download a version of the Python GUI we used today on your own computer.
   * iPython - write python scripts in your browser!
 * Web Technologies (HTML/Javascript/CSS)
 * Git - "Source code management" Keep track of the changes you make to your code. Make it easy to share your code and collaborate with other programmers
@@ -31,7 +31,10 @@ Check out the list below for some helpful resources that will help you on your j
 * [edX.org](http://edX.org) (Free)
 * [Udacity](http://www.udacity.com) ($)
 
-## Web Programming
+### Web Programming
+So many applications that we use every day now live on the web. The web provides a fantastic platform for developing tools whether you are using a mac, pc, or mobile device. Many of these applications utilize a wide variety of technologies. Usually these technologies are broken into two categories "Backend" -- which is the server code that pushes web pages to the browser or "Frontend" which is client code that runs in your web browser. Generally, python is used to create "Backend" code, and HTML+CSS+Javascript can be used to create "Frontend" applications. Javascript is unique in that you can create *both* the server code (using a framework called [node.js](https://nodejs.org)) and the client code with one language.
+
+At CHOP many of our applications "Backend" code is written using python, and our "Frontend" code is a combination of HTML, CSS, and Javascript. Take a look at our github page for examples of our work.
 
 * [Django](http://djangoproject.com) Full featured web framework. This project is a good place to start. You'll find that working with django you'll touch on a lot of interesting technologies: html/css/javascript, web APIs, databases, etc.
 * [Flask](http://flask.pocoo.org) Like django but with not as many bells and whistles.
@@ -39,15 +42,17 @@ Check out the list below for some helpful resources that will help you on your j
 * [jQuery](http://jquery.com) A javascript library with excellent documentation that simplifies
 
 ### The Gamer
+Most people enjoy playing games. Whether they're on a console, computer, your phone or your browser, sometimes its nice to kick back and play.
+
 
 * [PyGame](http://pygame.org) - a toolkit that makes creating games in python easy and fun.
-* HTML5 + Javascript + CSS
+* (HTML5 + Javascript + CSS)[http://www.html5gamedevelopment.com/]
   * quintus
   * RPG.js - Create 2.5D Bitmap based "Zelda-like" games
 
 ### Data Cruncher
 
-  * pandas
+ * pandas
 
 ### Data Viz Guru
 
