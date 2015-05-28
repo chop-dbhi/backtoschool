@@ -71,7 +71,7 @@ Crunching data can be fun and extremely useful, but sometimes information is bes
 * [d3](http://d3js.org/) - An amazing javascript data visualization library. This library has a high learning curve, but the visualizations it can create are truly amazing. Check out some of the [top visualizations of 2014](http://www.pewresearch.org/fact-tank/2014/12/29/our-favorite-pew-research-center-data-visualizations-from-2014/) -- most of these are done with d3.
 * [iPython](http://ipython.org) - Mentioned above, this python tool makes turning your python code into visualizations quick and easy. You can use it in your web browser try out the "Notebook" version of it [here](https://try.jupyter.org/)
 
-### Autamaton
+### Automaton
 Writing software that runs on the web or in the terminal is a lot of fun, but what if you could write software to automatically unlock doors, water your plants, or alert you when someone comes into a room? Well you can! The computers we've been using today are called Raspberry Pi's. These machines are relatively inexpensive, but they pack a lot of features into a tiny package. Combined with a microcontroller like the Arduino you can build projects that do any variety of things. These projects usually require a bit of electrical engineering (like soldering and circuit design) but there are tons of easy projects to get you started.
 
 * [Raspberry Pi](https://www.raspberrypi.org/) - The mini computer you used today!
