@@ -5,7 +5,7 @@ https://github.com/chop-dbhi/backtoschool
 
 ### Continue at home
 
-If you'd like to continue at home ** check out our [releases](https://github.com/chop-dbhi/backtoschool/releases) page ** for a copy of the python project you worked on today.
+If you'd like to continue at home check out our [releases](https://github.com/chop-dbhi/backtoschool/releases) page for a copy of the python project you worked on today.
 
 ---
 
