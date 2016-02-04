@@ -16,3 +16,5 @@ imgEditor/dist/*
 *.log
 
 *.toc
+
+notebooks/.ipynb_checkpoints/
