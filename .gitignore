@@ -18,3 +18,5 @@ imgEditor/dist/*
 *.toc
 
 notebooks/.ipynb_checkpoints/
+
+keystore.db
