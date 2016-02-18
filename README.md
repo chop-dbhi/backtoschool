@@ -1,5 +1,12 @@
 Where do I go from here?
 ------------------------
+### Learn more about these Python commands
+
+Today we went over some Python basics, but there are a few other commands that might be very helpful:
+
+1. [The elif statment](https://docs.python.org/3/tutorial/controlflow.html#if-statements) is used between an `if` statement and and `else` statement to check for other possible conditions that might true.
+2. [The or operator](http://openbookproject.net/thinkcs/python/english3e/conditionals.html#logical-operators) can be used in the same place as the `and` operator to change the logic of your conditions.
+
 
 https://github.com/chop-dbhi/backtoschool
 
