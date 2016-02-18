@@ -8,3 +8,13 @@ imgEditor/out.txt
 imgEditor/oblique.png
 
 imgEditor/imgEditor.iml
+
+imgEditor/build/*
+
+imgEditor/dist/*
+
+*.log
+
+*.toc
+
+notebooks/.ipynb_checkpoints/

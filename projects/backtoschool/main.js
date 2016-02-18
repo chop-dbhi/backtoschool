@@ -10,7 +10,7 @@ button.onclick = function(){
   // Find the img tag on the page that holds the x-ray
   var img = document.getElementById("xray");
   // Change the img tag so that it shows another image
-  img.src = "/backtoschool/img/lateral_pin.png";
+  img.src = "/backtoschool/img/xray_pin.png";
 };
 
 // Here we find the spot on the page where we want to add the button

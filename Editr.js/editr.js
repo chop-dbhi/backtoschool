@@ -31,37 +31,37 @@
         };
 
         // Default settings
-        opts = $.extend({
+        opts = $.extend(true, {
             parsers: {
                 'html': {
                     type: 'html',
                     extension: 'html',
                     fn: function(str, isEncoded) {
-                       //str = str
-                       //    .replace(/body\b[^>]*>/, '<body><div class="body">')
-                       //    .replace('</body>', '</body>');
-                       //
-                       //str = __.obj('div').html(str);
-                       //
-                       //str.find('script, link, style').remove();
-                       //
-                       //if (!isEncoded) {
-                       //
-                       //    if (str.find('.body').length) {
-                       //        str = str.find('.body').html();
-                       //    } else {
-                       //        str = str.html()
-                       //    }
-                       //
-                       //    str = str
-                       //    // replace multiple empty lines with one empty line
-                       //    .replace(/[\r\n]+/gi, '\n')
-                       //    // remove first and last empty line
-                       //    .replace(/^[\r\n]|[\n\r]$/gi, '');
-                       //} else {
-                       //    str = str.html();
-                       //}
-                       //
+                        str = str
+                            .replace(/body\b[^>]*>/, '<body><div class="body">')
+                            .replace('</body>', '</body>');
+
+                        str = __.obj('div').html(str);
+
+                        str.find('script, link, style').remove();
+
+                        if (!isEncoded) {
+
+                            if (str.find('.body').length) {
+                                str = str.find('.body').html();
+                            } else {
+                                str = str.html()
+                            }
+
+                            str = str
+                            // replace multiple empty lines with one empty line
+                            .replace(/[\r\n]+/gi, '\n')
+                            // remove first and last empty line
+                            .replace(/^[\r\n]|[\n\r]$/gi, '');
+                        } else {
+                            str = str.html();
+                        }
+
                         return str;
                     }
                 },
@@ -117,7 +117,7 @@
             path: 'items',
 
             // ACE theme
-            theme: 'chrome',
+            theme: 'monokai',
 
             // ACE read mode
             readonly: false,
@@ -260,6 +260,33 @@
                         rel: 'stylsheet'
                     }));
 
+                    if (opts.libs && $.isArray(opts.libs)) {
+                        var rExt = /\.(js|css)\??.*/,
+                            doc = el.preview.result[0].contentWindow.document;
+                        var queue = [];
+                        $.each(opts.libs, function(i, url){
+                            if (!url || typeof url !== 'string') return;
+                            var elem, ext = rExt.exec(url) && RegExp.$1;
+                            if (!ext) return;
+                            if (ext === 'js') {
+                                elem = doc.createElement('script');
+                                elem.src = url;
+                                $(elem).on('load', function(){
+                                    if (queue.length) doc.head.appendChild(queue.shift());
+                                });
+                                queue.push(elem);
+                            } else if (ext === 'css') {
+                                elem = doc.createElement('link');
+                                elem.rel = "stylesheet";
+                                elem.href = url;
+                                doc.head.appendChild(elem);
+                            }
+                        });
+                        if (queue.length) {
+                            doc.head.appendChild(queue.shift());
+                        }
+                    }
+
                     // Build editors
                     el.editors = build.editors();
                 });
@@ -306,14 +333,12 @@
                 aceEditor = ace.edit(textarea.attr('id'));
                 aceEditor.setTheme("ace/theme/" + opts.theme);
                 aceEditor.getSession().setMode('ace/mode/' + (file.extension === 'js' ? 'javascript' : file.extension));
-                aceEditor.getSession().setUseWrapMode(true);
+                aceEditor.getSession().setUseWrapMode(opts.wrap);
                 aceEditor.setReadOnly(opts.readonly);
-				aceEditor.setBehavioursEnabled(false);
-                aceEditor.setWrapBehavioursEnabled(false);
-                aceEditor.setOption("enableEmmet", false);
+                aceEditor.setWrapBehavioursEnabled(true);
+                aceEditor.setOption("enableEmmet", true);
                 aceEditor.getSession().setUseWorker(false);
-				aceEditor.setShowPrintMargin(false);
-				aceEditor.setFontSize(15);
+
                 aceEditor.on('change', _.debounce(function() {
                     if (data.activeItem !== -1) {
                         __.renderPreview(data.files.html[data.activeItem]);
@@ -388,6 +413,7 @@
                     timer = setInterval(function() {
                         if (data.filesLoaded === data.filesTotal) {
                             fn.call(context, args);
+                            clearInterval(timer);
                         }
                     }, 50);
                 };
@@ -665,7 +691,7 @@
                     hiddenFilesTotal = 0;
 
                 // Remove last ';'
-                files.replace(/;$/, '');
+                files.replace(/;\s+?$/, '');
 
                 if (files) {
                     // Split files list to array
