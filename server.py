@@ -76,7 +76,7 @@ class SimpleAppRequestHandler(SimpleHTTPRequestHandler):
         if self.headers['Content-Type'] == 'application/x-www-form-urlencoded':
             form_data =  urllib.parse.parse_qs(raw_data)
             try:
-                key = form_data['key'][0] if 'key' in form_data else form_data['name'][0]
+                key = form_data['key'][0].lower() if 'key' in form_data else form_data['name'][0].lower()
                 value = form_data['value'][0]
             except KeyError:
                 self.send_response(500)
