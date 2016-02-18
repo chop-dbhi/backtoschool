@@ -35,7 +35,7 @@ class SimpleAppRequestHandler(SimpleHTTPRequestHandler):
         if get(self):
             return
 
-        clean_path = self.path.strip('/')
+        clean_path = self.path.strip('/').lower()
         
         if clean_path.startswith('db/'):
             conn = sqlite3.connect('keystore.db')
@@ -63,7 +63,7 @@ class SimpleAppRequestHandler(SimpleHTTPRequestHandler):
     def do_POST(self):
         if post(self):
             return
-        clean_path = self.path.strip('/')
+        clean_path = self.path.strip('/').lower()
         
         # To be flexible, we don't care if the post to /db or just /
         if clean_path.startswith('db/'):
