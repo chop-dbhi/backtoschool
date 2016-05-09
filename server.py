@@ -5,7 +5,7 @@ import argparse
 
 from http.server import SimpleHTTPRequestHandler
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description='Simple (insecure) webserver. Allows all origins in CORS. Also serves as simple key-value store. POST and PUT methods save data to a <key> equal to the path. Retrieve using a GET to db/<key>.')
 parser.add_argument("-p", "--port", default=8000, action="store", type=int, help="port to listen on")
 args = parser.parse_args()
 
