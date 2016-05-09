@@ -1,8 +1,15 @@
 import sqlite3
 import socketserver
 import urllib.parse
+import argparse
+
 from http.server import SimpleHTTPRequestHandler
-PORT = 8000
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-p", "--port", default=8000, action="store", type=int, help="port to listen on")
+args = parser.parse_args()
+
+PORT = args.port
 
 # You can override this server by filling in any or all of three functions below:
 
